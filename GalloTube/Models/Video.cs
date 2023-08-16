@@ -9,20 +9,19 @@ public class Video
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    [Display(Name = "Título")]
-    [Required(ErrorMessage = "O Título é obrigatório")]
-    [StringLength(100, ErrorMessage = "O Título deve possuir no máximo 100 caracteres")]
-    public string Title { get; set; }
+    [Display(Name = "Nome")]
+    [Required(ErrorMessage = "O Nome é obrigatório")]
+    [StringLength(100, ErrorMessage = "O Nome deve possuir no máximo 100 caracteres")]
+    public string Name { get; set; }
 
     [Display(Name = "Descrição")]
     [Required(ErrorMessage = "A Descrição é obrigatória")]
-    [StringLength(8000, ErrorMessage = "A Sinopse deve possuir no máximo 8000 caracteres")]
-    public string Descrition { get; set; }
+    [StringLength(8000, ErrorMessage = "A Descrição deve possuir no máximo 8000 caracteres")]
+    public string Description { get; set; }
 
-    [Column(TypeName = "UploadDate")]
     [Display(Name = "Data de Lançamento")]
     [Required(ErrorMessage = "A Data de Lançamento é obrigatório")]
-    public DateTime VideoDate { get; set; }
+    public DateTime UploadDate { get; set; }
 
     [Display(Name = "Duração (em minutos)")]
     [Required(ErrorMessage = "A Duração é obrigatória")]
@@ -30,7 +29,7 @@ public class Video
 
     [StringLength(200)]
     [Display(Name = "Thumbnail")]
-    public string Image { get; set; }
+    public string Thumbnail { get; set; }
 
     [StringLength(200)]
     [Display(Name = "VideoFile")]

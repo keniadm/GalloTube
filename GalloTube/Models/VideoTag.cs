@@ -5,17 +5,13 @@ namespace GalloTube.Models;
 [Table("VideoTag")]
 public class VideoTag
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
-
-    [Required]
+    [Key, Column(Order = 1)]
     public int VideoId { get; set; }
     [ForeignKey("VideoId")]
-    public Video Video { get; set; } //propriedade de navegação
+    public Video Video { get; set; }
 
-    [Required]
-    public string UserId { get; set; } 
-    [ForeignKey("UserId")]
-    public AppUser User { get; set; }
+    [Key, Column(Order = 2)]
+    public byte TagId { get; set; }
+    [ForeignKey("TagId")]
+    public Tag Tag { get; set; }
 }

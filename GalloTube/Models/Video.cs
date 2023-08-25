@@ -20,7 +20,7 @@ public class Video
     public string Description { get; set; }
 
     [Display(Name = "Data de Lançamento")]
-    [Required(ErrorMessage = "A Data de Lançamento é obrigatório")]
+    [Required(ErrorMessage = "A Data de Lançamento é obrigatória")]
     public DateTime UploadDate { get; set; }
 
     [Display(Name = "Duração (em minutos)")]
